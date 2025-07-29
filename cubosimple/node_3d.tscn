@@ -1,0 +1,32 @@
+[gd_scene load_steps=6 format=3 uid="uid://bwq2h544wajm1"]
+
+[ext_resource type="Script" uid="uid://djp74jkese1rg" path="res://giraCubo.gd" id="1_a202f"]
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_4xowi"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_a202f"]
+albedo_color = Color(0.1608, 0.67, 0.2881, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_noarx"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_a0tk4"]
+albedo_color = Color(0.801332, 0.46442, 5.77569e-07, 1)
+
+[node name="Node3D" type="Node3D"]
+script = ExtResource("1_a202f")
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.712381, 0.701793, 0, -0.701793, 0.712381, 0, 1.39448, 1.82264)
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(0.911791, -0.161471, 0.377578, 0, 0.919451, 0.393204, -0.410655, -0.35852, 0.838347, 0, 1.30197, 1.89589)
+
+[node name="Suelo" type="MeshInstance3D" parent="."]
+transform = Transform3D(20, 0, 0, 0, 20, 0, 0, 0, 20, 0, 0, 0)
+mesh = SubResource("PlaneMesh_4xowi")
+surface_material_override/0 = SubResource("StandardMaterial3D_a202f")
+
+[node name="Cubo" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, 0)
+mesh = SubResource("BoxMesh_noarx")
+surface_material_override/0 = SubResource("StandardMaterial3D_a0tk4")
