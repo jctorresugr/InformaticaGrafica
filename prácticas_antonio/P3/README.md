@@ -1,4 +1,4 @@
-Modelo Jeráquico Grua
+Modelo Jeráquico Grúa
 
 Al ejecutar el proyecto se usan las siguientes teclas: 
 
